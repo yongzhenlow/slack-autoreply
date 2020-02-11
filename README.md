@@ -1,5 +1,7 @@
 # Slack Autoreply
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 A quick-and-dirty out-of-office Slack autoreply based on NodeJS.
 
 ![example image](https://yongzhenlow.github.com/slack-autoreply/images/example.png)
@@ -9,6 +11,14 @@ Sends an [ephemeral message](https://api.slack.com/methods/chat.postEphemeral) w
 You'll need `NodeJS` (tested on 12.15.0) and the [Slack legacy token](https://api.slack.com/legacy/custom-integrations/legacy-tokens).
 
 ## Development
+
+### Install dependencies
+
+```bash
+yarn install
+```
+
+### Setup environment variables
 
 Clone the `.env.example` file to `.env`
 
@@ -21,7 +31,7 @@ Request your [Slack legacy token](https://api.slack.com/legacy/custom-integratio
 ### Run the app in development mode
 
 ```bash
-yarn dev
+yarn start
 ```
 
 ## Production setup
