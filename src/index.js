@@ -28,8 +28,12 @@ rtm.on('message', async (event) => {
         return;
     }
 
-    // DMs and not bot message
-    if (channel.indexOf('D') === 0 && (!subtype || subtype !== 'bot_message')) {
+    // DMs only and not from bot messages
+    if (
+        channel.indexOf('D') === 0
+        && (!subtype || subtype !== 'bot_message')
+        && user !== 'USLACKBOT'
+    ) {
         try {
             const lastTs = tsStore[user] || 0;
 
